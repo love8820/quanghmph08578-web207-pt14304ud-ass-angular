@@ -1,0 +1,224 @@
+<head>
+   <title>Assignment-Angular</title> 
+   <!--meta tags -->
+   <meta charset="UTF-8">
+   <base href="/">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+   <meta name="author" content="pixelhint.com">
+   <meta name="description" content=""/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+   <meta name="keywords" content="Toys Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+      Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+   
+   <script>
+      addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+      }, false);
+      
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+   </script>
+   
+   
+   <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">   -->
+   <!-- <link href="css/checkout.css" rel="stylesheet" type="text/css" media="all"> -->
+   <!-- <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">  -->
+   <!-- <link href="css/creditly.css" rel="stylesheet" type="text/css" media="all"> -->
+   <!-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" /> -->
+   <!-- <link rel="stylesheet" href="css/easy-responsive-tabs.css" type="text/css" media="all" /> -->
+   <!-- <link href="css/JiSlider.css" rel="stylesheet"> -->
+   <!-- <link rel="stylesheet" href="css/shop.css" type="text/css" /> -->
+   <!-- <link rel="stylesheet" href="css/jquery-ui1.css" type="text/css" /> -->
+   <!-- <link href="css/style.css" rel="stylesheet" type='text/css' media="all"> -->
+   
+
+
+   <link href="//fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+   <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+   
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+</head>
+
+<app-header></app-header>
+<app-img></app-img>
+
+<!--show Now-->  
+         <section class="contact py-lg-4 py-md-3 py-sm-3 py-3">
+            <div class="container-fluid py-lg-5 py-md-4 py-sm-4 py-3">
+               <h3 class="title text-center mb-lg-5 mb-md-4 mb-sm-4 mb-3">Teddy Bear Store</h3>
+               <div class="row">
+                  <div class="side-bar col-lg-3">
+                     <div class="search-hotel">
+                        <h3 class="agileits-sear-head">Search Here..</h3>
+                        <form action="#" method="post">
+                           <input type="search" placeholder="Product name..." name="search" required="">
+                           <input type="submit" value=" ">
+                        </form>
+                     </div>
+                               <!-- price range -->
+                               <div class="range">
+                                   <h3 class="agileits-sear-head">Price range</h3>
+                                   <ul class="dropdown-menu6">
+                                       <li>
+   
+                                           <div id="slider-range"></div>
+                                           <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
+                                       </li>
+                                   </ul>
+                               </div>
+                               <!-- //price range -->
+                     <!--preference -->
+                     <div class="left-side">
+                        <h3 class="agileits-sear-head">Occasion</h3>
+                        <ul>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">Gift</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">Kid Play</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">Dolls</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">Remot</span>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- // preference -->
+                     <!-- discounts -->
+                     <div class="left-side">
+                        <h3 class="agileits-sear-head">Discount</h3>
+                        <ul>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">5% or More</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">10% or More</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">20% or More</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">30% or More</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">50% or More</span>
+                           </li>
+                           <li>
+                              <input type="checkbox" class="checked">
+                              <span class="span">60% or More</span>
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- //discounts -->
+                     
+                     <!-- deals -->
+                     <div class="deal-leftmk left-side">
+                        <h3 class="agileits-sear-head">Special Deals</h3>
+                        <div class="row special-sec1" *ngFor="let product of products">
+                           <div class="col-xs-4 img-deals">
+                              <img class="img-thumbnail"  style="width:92px ; height:91px" [src]="product.img" alt="">
+                           </div>
+                           <div class="col-xs-8 img-deal1"> 
+                              <h3>{{product.name}}</h3>
+                              <a href="single.html">${{product.price}}</a>
+                           </div>
+                           <div class="clearfix"></div>
+                        </div>
+                     </div>
+                     <!-- //deals -->
+                  </div>
+                  <div class="left-ads-display col-lg-9">
+                     <div class="row" >
+                        
+                      
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-6 product-men women_two" *ngFor="let product of products">
+                           <div class="product-toys-info" >
+                              <div class="men-pro-item" >
+                                 <div class="men-thumb-item">
+                                    <a href="#"><img class="img-thumbnail"  style="width:237px ; height:260px" [src]="product.img" alt=""></a>
+                                    <div class="men-cart-pro">
+                                       <div class="inner-men-cart-pro">
+                                          <a routerLink="/product/{{product.id}}" class="link-product-add-cart">Quick View</a>
+                                       </div>
+                                    </div>
+                                    
+                                 </div>
+                                 <div class="item-info-product">
+                                    <div class="info-product-price">
+                                       <div class="grid_meta">
+                                          <div class="product_price">
+                                             <h4>
+                                                <a href="single.html">{{product.name}}</a>
+                                             </h4>
+                                             <div class="grid-price mt-2">
+                                                <span class="money ">${{product.price}}</span>
+                                             </div>
+                                          </div>
+                                          
+                                       </div>
+                                       <div class="toys single-item hvr-outline-out">
+                                          <form action="#" method="post">
+                                             <input type="hidden" name="cmd" value="_cart">
+                                             <input type="hidden" name="add" value="1">
+                                             <input type="hidden" name="toys_item" value="toys (Grey)">
+                                             <input type="hidden" name="amount" value="67.00">
+                                             <button type="submit" class="toys-cart ptoys-cart">
+                                             <i class="fas fa-cart-plus"></i>
+                                             </button>
+                                          </form>
+                                       </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- //show Now-->
+
+
+         <style>
+            div.product-toys-info{
+               border-width:2px; border-style:outset;
+               /* border-width:4px; border-style:double; */
+               width:250px;
+               margin: 0px 0px 30px 0px;
+            }
+            
+            
+        </style>
+         <app-footer></app-footer>
+         
+   

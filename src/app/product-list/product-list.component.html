@@ -1,0 +1,58 @@
+<app-header></app-header>
+<app-img></app-img>
+
+<header class ="d-flex mb-3 pt-5 justify-content-between">
+    <h1><strong>Product-List</strong></h1>
+</header>
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Size</th>
+        <th scope="col">Describe</th> 
+        <th scope="col">Status</th>
+        <th scope="col">Image</th>
+        <th width="130" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.name}}</td> 
+        <td>{{product.price}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.size}}</td>
+        <td>{{product.desc}}</td>
+        <td>{{product.status}}</td>
+        <td><a href="#"><img class="card-img-top" [src]="product.img" alt=""></a></td>
+        <td>
+          &nbsp;&nbsp;<button class="btn btn-primary" routerLink="/product/{{product.id}}" >Detail</button><br><br>
+            <button class="btn btn-info ml-3" >Edit</button><br><br>
+            <button class="btn btn-danger ml-3" >Delete</button>
+        </td>
+      </tr>    
+    </tbody>
+</table>
+
+  
+<!-- routerLink="/product/edit/{{product.id}}" --> 
+
+<style>
+    button{ width:70px ;
+            height: 40px; 
+    }
+    img{
+      width:150px ;
+            height: 150px
+    }
+    /* .btn{
+        float:left; 
+    } */
+</style>
+
+
+<app-footer></app-footer>

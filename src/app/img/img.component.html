@@ -1,0 +1,186 @@
+<head>
+    <title>Assignment-Angular</title> 
+    <!--meta tags -->
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+ 
+    <meta name="author" content="pixelhint.com">
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+    <meta name="keywords" content="Toys Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+       Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    
+    <script>
+       addEventListener("load", function () {
+         setTimeout(hideURLbar, 0);
+       }, false);
+       
+       function hideURLbar() {
+         window.scrollTo(0, 1);
+       }
+    </script>
+    <base href="/">
+    
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"> 
+    <link href="css/checkout.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all"> 
+    <link href="css/creditly.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/easy-responsive-tabs.css" type="text/css" media="all" />
+    <link href="css/JiSlider.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/shop.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-ui1.css" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type='text/css' media="all"> -->
+    
+
+
+    <link href="//fonts.googleapis.com/css?family=Sunflower:500,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+
+ 
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ </head>
+
+
+
+
+
+ <!-- banner -->
+ <div class="inner_page-banner one-img">
+</div>
+<!--//banner -->
+<!-- short -->
+<div class="using-border py-3">
+   <div class="inner_breadcrumb  ml-4">
+      <ul class="short_ls">
+         <li>
+            <a href="#"></a>
+            <span></span>
+         </li>
+         <li></li>
+      </ul>
+   </div>
+</div>
+<!-- //short-->
+
+
+
+
+<!-- Modal 1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          <div class="modal-body">
+             <div class="register-form">
+                <form action="#" method="post">
+                   <div class="fields-grid">
+                      <div class="styled-input">
+                         <input type="text" placeholder="Your Name" name="Your Name" required="">
+                      </div>
+                      <div class="styled-input">
+                         <input type="email" placeholder="Your Email" name="Your Email" required="">
+                      </div>
+                      <div class="styled-input">
+                         <input type="password" placeholder="password" name="password" required="">
+                      </div>
+                      <button type="submit" class="btn subscrib-btnn">Login</button>
+                   </div>
+                </form>
+             </div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- //Modal 1-->
+ <!--js working-->
+ <script src='js/jquery-2.2.3.min.js'></script>
+ <!--//js working-->
+ <!-- cart-js -->
+  <script src="js/minicart.js"></script>
+ <script>
+    toys.render();
+    
+    toys.cart.on('toys_checkout', function (evt) {
+        var items, len, i;
+    
+        if (this.subtotal() > 0) {
+            items = this.items();
+    
+            for (i = 0, len = items.length; i < len; i++) {}
+        }
+    });
+ </script>
+ <!-- //cart-js -->
+   <!-- price range (top products) -->
+   <script src="js/jquery-ui.js"></script>
+   <script>
+       //<![CDATA[ 
+       $(window).load(function () {
+           $("#slider-range").slider({
+               range: true,
+               min: 0,
+               max: 9000,
+               values: [50, 6000],
+               slide: function (event, ui) {
+                   $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+               }
+           });
+           $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+       }); //]]>
+   </script>
+   <!-- //price range (top products) -->
+
+ <!-- start-smoth-scrolling -->
+  <script src="js/move-top.js"></script>
+ <script src="js/easing.js"></script>
+ <script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+    });
+ </script>
+ <!-- start-smoth-scrolling -->
+ <!-- here stars scrolling icon -->
+ <script>
+    $(document).ready(function () {
+    
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
+    
+    
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+    
+    });
+ </script>
+ <!-- //here ends scrolling icon -->
+ <!--bootstrap working-->
+ <script src="js/bootstrap.min.js"></script>
+ <!-- //bootstrap working--> 
