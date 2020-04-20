@@ -1,58 +1,92 @@
-<app-header></app-header>
-<app-img></app-img>
-
-<header class ="d-flex mb-3 pt-5 justify-content-between">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Product List Manager</li>
+    </ol>
+</nav>
+<header class="d-flex mb-3 pt-5 justify-content-between">
     <h1><strong>Product-List</strong></h1>
 </header>
 
 <table class="table table-dark">
     <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">Category</th>
-        <th scope="col">Size</th>
-        <th scope="col">Describe</th> 
-        <th scope="col">Status</th>
-        <th scope="col">Image</th>
-        <th width="130" scope="col">Action</th>
-      </tr>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Size</th>
+            <th scope="col">Describe</th>
+            <th scope="col">Status</th>
+            <th scope="col">Image</th>
+            <th scope="col">Image 1</th>
+            <th scope="col">Image 2</th>
+            <th scope="col">Image 3</th>
+            <th width="130" scope="col">Action</th>
+
+        </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of products">
-        <th scope="row">{{product.id}}</th>
-        <td>{{product.name}}</td> 
-        <td>{{product.price}}</td>
-        <td>{{product.category}}</td>
-        <td>{{product.size}}</td>
-        <td>{{product.desc}}</td>
-        <td>{{product.status}}</td>
-        <td><a href="#"><img class="card-img-top" [src]="product.img" alt=""></a></td>
-        <td>
-          &nbsp;&nbsp;<button class="btn btn-primary" routerLink="/product/{{product.id}}" >Detail</button><br><br>
-            <button class="btn btn-info ml-3" >Edit</button><br><br>
-            <button class="btn btn-danger ml-3" >Delete</button>
-        </td>
-      </tr>    
+        <tr *ngFor="let product of products">
+            <th scope="row">{{ product.id }}</th>
+            <td>
+
+                {{ product.name }}
+            </td>
+            <td>{{product.price}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.size}}</td>
+            <td>{{product.desc}}</td>
+            <td>{{product.status}}</td>
+            <td>
+                <a href="#"><img class="card-img-top" [src]="product.img" alt=""></a>
+            </td>
+            <td>
+                <a href="#"><img class="card-img-top" [src]="product.img1" alt=""></a>
+            </td>
+            <td>
+                <a href="#"><img class="card-img-top" [src]="product.img2" alt=""></a>
+            </td>
+            <td>
+                <a href="#"><img class="card-img-top" [src]="product.img3" alt=""></a>
+            </td>
+            <td>
+                &nbsp;&nbsp;<button class="btn btn-primary" routerLink="/product/{{product.id}}">Detail</button><br><br>
+                <button class="btn btn-info ml-3" routerLink="/admin/product/edit/{{product.id}}">Edit</button><br><br>
+                <button class="btn btn-danger ml-3" (click)="removeItem(product.id)">Delete</button>
+            </td>
+        </tr>
     </tbody>
 </table>
 
-  
-<!-- routerLink="/product/edit/{{product.id}}" --> 
+<!-- <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+    </ngb-pagination>
+
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+</div> -->
+
+
+
+
+
+<!-- routerLink="/product/edit/{{product.id}}" -->
 
 <style>
-    button{ width:70px ;
-            height: 40px; 
+    button {
+        width: 70px;
+        height: 40px;
     }
-    img{
-      width:150px ;
-            height: 150px
+    
+    img {
+        width: 150px;
+        height: 150px
     }
     /* .btn{
-        float:left; 
-    } */
+      float:left; 
+  } */
 </style>
-
-
-<app-footer></app-footer>

@@ -8,9 +8,11 @@ import { ProductService } from '../product.service'
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products: Product[];
+  products: Product[]; 
   constructor(
     private productService: ProductService ) { }
+
+
 
   ngOnInit(): void {
     this.getProducts();
@@ -21,5 +23,20 @@ export class ProductListComponent implements OnInit {
       this.products =data; 
     })
   }
+
+  removeItem(id){
+    this.productService.removeProduct(id).subscribe(response => {
+     this.products = this.products.filter(product => product.id != response.id);
+   })
+  }
+  // page = 1;
+  // pageSize = 10;
+  // collectionSize = Product.length;
+
+  // get product(): Product[] {
+  //   return Product
+  //     .map((products, i) => ({id: i + 1, ...products}))
+  //     .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  // }
 
 }

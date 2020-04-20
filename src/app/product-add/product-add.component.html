@@ -1,20 +1,25 @@
-<app-header></app-header>
-<app-img></app-img>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb my-breadcrumb">
+        <li class="breadcrumb-item"><a href="">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Product Add Manager</li>
+    </ol>
+</nav>
 
 <h1><strong>Product-Add</strong></h1>
-<form class="w-50 mx-auto mt-3"> 
+<form class="w-50 mx-auto mt-3">
 
-  <div class="form-group">
-    <input type="text" name="name" class="form-control"placeholder="Product Name" [(ngModel)]="product.name">
-    <input type="text" name="price" class="form-control"placeholder="Price" [(ngModel)]="product.price">
-    <input type="text" name="category" class="form-control"placeholder="Category" [(ngModel)]="product.category">
-    <input type="text" name="size" class="form-control"placeholder="Size" [(ngModel)]="product.size">
-    <input type="text" name="desc" class="form-control"placeholder="Desc" [(ngModel)]="product.desc">
-    <input type="text" name="status" class="form-control"placeholder="Status" [(ngModel)]="product.status">
-    <input type="text" name="img" class="form-control"placeholder="Img" [(ngModel)]="product.img">
+    <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="Product Name" [(ngModel)]="product.name">
+        <input type="text" name="price" class="form-control" placeholder="Price" [(ngModel)]="product.price">
+        <input type="text" name="category" class="form-control" placeholder="Category" [(ngModel)]="product.category">
+        <input type="text" name="size" class="form-control" placeholder="Size" [(ngModel)]="product.size">
+        <input type="text" name="desc" class="form-control" placeholder="Desc" [(ngModel)]="product.desc">
+        <input type="text" name="status" class="form-control" placeholder="Status" [(ngModel)]="product.status">
+        <input type="text" name="img" class="form-control" placeholder="Img" [(ngModel)]="product.img">
+        <input type="text" name="img" class="form-control" placeholder="Img 1" [(ngModel)]="product.img1">
+        <input type="text" name="img" class="form-control" placeholder="Img 2" [(ngModel)]="product.img2">
+        <input type="text" name="img" class="form-control" placeholder="Img 3" [(ngModel)]="product.img3">
 
-  </div>
-  <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
 </form>
-
-<app-footer></app-footer>
