@@ -18,6 +18,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ImgComponent } from './img/img.component';
+import { AdminComponent } from './backend/admin/admin.component';
+import { DashboardComponent } from './backend/dashboard/dashboard.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { ContactComponent } from './contact/contact.component';
+import { NewsComponent } from './news/news.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +38,13 @@ import { ImgComponent } from './img/img.component';
     HeaderComponent,
     FooterComponent,
     SlideShowComponent,
-    ImgComponent
+    ImgComponent,
+    AdminComponent,
+    DashboardComponent,
+    AboutComponent,
+    ServiceComponent,
+    ContactComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
